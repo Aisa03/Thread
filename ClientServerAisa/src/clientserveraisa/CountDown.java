@@ -9,6 +9,6 @@ package clientserveraisa;
  *
  * @author Studente
  */
-public class CountDown {
+public class CountDown extends Thread{
     
 }

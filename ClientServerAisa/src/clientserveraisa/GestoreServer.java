@@ -16,6 +16,8 @@ public class GestoreServer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Server srv = new Server(2000);
+        srv.inAscolto();
     }
     
 }

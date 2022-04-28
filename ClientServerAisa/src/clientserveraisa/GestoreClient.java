@@ -5,6 +5,11 @@
  */
 package clientserveraisa;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Studente
@@ -15,7 +20,13 @@ public class GestoreClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            // TODO code application logic here
+            Client cli = new Client(InetAddress.getLocalHost(), 2000);
+            String str = cli
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(GestoreClient.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
