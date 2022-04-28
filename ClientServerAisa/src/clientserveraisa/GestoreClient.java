@@ -23,7 +23,7 @@ public class GestoreClient {
         try {
             // TODO code application logic here
             Client cli = new Client(InetAddress.getLocalHost(), 2000);
-            String str = cli
+            Client str = cli;
         } catch (UnknownHostException ex) {
             Logger.getLogger(GestoreClient.class.getName()).log(Level.SEVERE, null, ex);
         }

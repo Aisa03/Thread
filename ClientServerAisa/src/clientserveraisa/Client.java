@@ -46,4 +46,25 @@ public class Client {
         return msg;
     }
     
+    
+     public void Scrivi(String messaggio)
+    {
+        try 
+        {
+            bw.write(messaggio + "\n");
+        } 
+        catch (IOException ex) 
+        {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try
+        {
+            bw.flush();
+        } 
+        catch (IOException ex)
+        {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 }

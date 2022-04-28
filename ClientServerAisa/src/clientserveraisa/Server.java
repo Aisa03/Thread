@@ -5,6 +5,7 @@
  */
 package clientserveraisa;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -18,6 +19,7 @@ import java.util.logging.Logger;
 public class Server {
     ServerSocket ss;
     Socket so;
+    BufferedReader br;
     
     public Server(int porta) 
     {
@@ -37,5 +39,18 @@ public class Server {
         } catch (IOException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public String Leggi()
+    {
+        String ritorno = "";
+        try 
+        {
+             ritorno = br.readLine();
+        } 
+        catch (IOException ex)
+        {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return ritorno ;
     }
 }
